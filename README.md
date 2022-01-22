@@ -5,8 +5,8 @@
 <div align="center">
 
 <a href="https://www.youtube.com/IftekharIAsif" target="blank">![YouTube](https://img.shields.io/youtube/channel/subscribers/UCvE1503oOurDjrFw2Mrt-Og?color=%09%23FF0000&logo=youtube&style=for-the-badge)</a>
-![Twitter](https://img.shields.io/twitter/follow/iftekhariasif?label=Iftekhar%20I%20Asif&logo=twitter&style=for-the-badge)
-![GitHub](https://img.shields.io/github/followers/IftekharIAsif?logo=github&style=for-the-badge)
+<a href="https://www.twitter.com/IftekharIAsif" target="blank">![Twitter](https://img.shields.io/twitter/follow/iftekhariasif?label=Iftekhar%20I%20Asif&logo=twitter&style=for-the-badge)
+<a href="https://www.github.com/IftekharIAsif" target="blank">![GitHub](https://img.shields.io/github/followers/IftekharIAsif?logo=github&style=for-the-badge)
 
 </div>
 
