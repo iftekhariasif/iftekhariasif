@@ -9,3 +9,13 @@
 <a href="https://www.github.com/IftekharIAsif" target="blank">![GitHub](https://img.shields.io/github/followers/IftekharIAsif?logo=github&style=for-the-badge)</a>
 
 </div>
+
+---
+
+### :technologist: ABOUT ME
+
+<p align="justify">
+An aspiring polyglot tech professional, a self-taught coding enthusiast, and a keen follower of cutting-edge technologies like Blockchain, AI, and ML. Using my technical and leadership expertise, I am committed to changing innovative ideas into scalable tech products. Apart from my professional life, I have a great passion for traveling, delicious food, and music.
+</p>
+
+---
