@@ -15,9 +15,7 @@
 ### :technologist: ABOUT ME
 
 <p align="justify">
-An aspiring polyglot tech professional, a self-taught coding enthusiast, and a keen follower of cutting-edge technologies like Blockchain, AI, and ML. Using my technical and leadership expertise, I am committed to changing innovative ideas into scalable tech products. Apart from my professional life, I have a great passion for traveling, delicious food, and music.
+An aspiring tech professional, a self-taught coding enthusiast with a passion for cutting-edge technologies like AI, Cloud, Web3 & Blockchain. Using my technical and leadership expertise, I am committed to changing innovative ideas into scalable tech products. Apart from my professional life, I have a great passion for traveling, workout, and music.
 </p>
 
 ---
-
-
