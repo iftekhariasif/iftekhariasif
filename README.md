@@ -19,3 +19,8 @@ An aspiring tech professional, a self-taught coding enthusiast with a passion fo
 </p>
 
 ---
+
+![GitHub Stats Card](https://github-readme-stats.vercel.app/api?username=iftekhariasif&count_private=true&show_icons=true&theme=tokyonight)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=iftekhariasif&layout=compact)
+
+---
