@@ -19,7 +19,3 @@ An aspiring tech professional, a self-taught coding enthusiast with a passion fo
 </p>
 
 ---
-
-<img src="https://github-readme-activity-graph.cyclic.app/graph?username=iftekhariasif&theme=react-dark&bg_color=20232a&hide_border=true" width="100%"/>
-
----
