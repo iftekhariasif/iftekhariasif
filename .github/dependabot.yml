@@ -1,0 +1,21 @@
+version: 2
+updates:
+  # JavaScript dependencies (Dependabot reads pnpm-lock.yaml under "npm").
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      # Bundle all minor + patch bumps into one PR to cut down on noise;
+      # major bumps still get their own PR so you can review breaking changes.
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+
+  # Keep the GitHub Actions used in the deploy workflow current.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
