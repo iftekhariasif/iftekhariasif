@@ -1,11 +1,18 @@
 import { en } from "./dictionaries/en";
+import { ja } from "./dictionaries/ja";
 
 /**
  * Supported locales. Add new ones here, provide a matching dictionary in
  * `dictionaries`, and register it below — components pick it up automatically.
  */
-export const locales = ["en"] as const; // "ja" to be added later
+export const locales = ["en", "ja"] as const;
 export type Locale = (typeof locales)[number];
+
+/** Human-readable label for each locale, shown in the language switcher. */
+export const localeLabels: Record<Locale, string> = {
+  en: "EN",
+  ja: "日本語",
+};
 
 export const defaultLocale: Locale = "en";
 
@@ -25,7 +32,7 @@ export type Dictionary = {
 
 const dictionaries: Record<Locale, Dictionary> = {
   en,
-  // ja, // TODO: add Japanese translation
+  ja,
 };
 
 /** Returns the dictionary for a locale, falling back to the default. */
