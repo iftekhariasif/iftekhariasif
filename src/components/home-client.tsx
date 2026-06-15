@@ -46,9 +46,9 @@ export function HomeClient() {
   };
 
   return (
-    <div className="flex min-h-dvh flex-col">
+    <div className="flex h-dvh flex-col overflow-hidden">
       <LocaleSwitcher locale={locale} onChange={handleChange} />
-      <main className="flex flex-1">
+      <main className="flex min-h-0 flex-1">
         <Hero locale={locale} />
       </main>
       <SiteFooter locale={locale} />

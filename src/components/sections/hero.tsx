@@ -7,7 +7,7 @@ export function Hero({ locale }: { locale?: Locale }) {
   return (
     <section
       id="home"
-      className="flex w-full items-center justify-center px-6 py-16"
+      className="flex w-full items-center justify-center px-6 py-8"
     >
       <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
