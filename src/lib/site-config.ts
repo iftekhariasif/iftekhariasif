@@ -1,6 +1,6 @@
 import type { ComponentType, SVGProps } from "react";
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
-import { ThreadsIcon, XIcon } from "@/components/icons";
+import { ThreadsIcon, WantedlyIcon, XIcon } from "@/components/icons";
 
 type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
 
@@ -18,7 +18,6 @@ export type SocialLink = {
 export const siteConfig = {
   fullName: "Iftekhar Idris Asif",
   email: "iftekhar.idris@rit-inc.co.jp",
-  copyrightYear: 2021,
   url: "https://iftekhariasif.com",
 } as const;
 
@@ -27,6 +26,11 @@ export const socialLinks: SocialLink[] = [
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/iftekhariasif/",
     icon: Linkedin,
+  },
+  {
+    label: "Wantedly",
+    href: "https://www.wantedly.com/id/iftekhariasif",
+    icon: WantedlyIcon,
   },
   {
     label: "YouTube",
