@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { siteConfig } from "@/lib/site-config";
+import { defaultLocale, getDictionary } from "@/lib/i18n";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,13 +14,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const t = getDictionary(defaultLocale);
+
 export const metadata: Metadata = {
-  title: `${siteConfig.name} | ${siteConfig.title}`,
-  description: siteConfig.description,
+  title: `${t.name} | ${t.title}`,
+  description: t.description,
   metadataBase: new URL(siteConfig.url),
   openGraph: {
-    title: `${siteConfig.name} | ${siteConfig.title}`,
-    description: siteConfig.description,
+    title: `${t.name} | ${t.title}`,
+    description: t.description,
     url: siteConfig.url,
     type: "website",
   },
@@ -31,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang={defaultLocale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
