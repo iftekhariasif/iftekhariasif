@@ -24,13 +24,14 @@ export function HomeClient() {
 
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
-    if (isLocale(saved)) {
-      setLocale(saved);
-      return;
-    }
     const browser = navigator.language.toLowerCase();
-    const match = locales.find((l) => browser.startsWith(l));
-    if (match) setLocale(match);
+    const resolved = isLocale(saved)
+      ? saved
+      : locales.find((l) => browser.startsWith(l));
+    // localStorage/navigator are only available after hydration, so this
+    // intentionally syncs state in a mount effect (runs once, no SSR mismatch).
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    if (resolved) setLocale(resolved);
   }, []);
 
   // Keep the document language and tab title in sync with the active locale.

@@ -1,6 +1,13 @@
 import type { ComponentType, SVGProps } from "react";
-import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
-import { ThreadsIcon, WantedlyIcon, XIcon } from "@/components/icons";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  ThreadsIcon,
+  WantedlyIcon,
+  XIcon,
+  YoutubeIcon,
+} from "@/components/icons";
 
 type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
 
@@ -25,7 +32,7 @@ export const socialLinks: SocialLink[] = [
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/iftekhariasif/",
-    icon: Linkedin,
+    icon: LinkedinIcon,
   },
   {
     label: "Wantedly",
@@ -35,17 +42,17 @@ export const socialLinks: SocialLink[] = [
   {
     label: "YouTube",
     href: "https://www.youtube.com/iftekhariasif",
-    icon: Youtube,
+    icon: YoutubeIcon,
   },
   {
     label: "Instagram",
     href: "https://www.instagram.com/iftekhariasif/",
-    icon: Instagram,
+    icon: InstagramIcon,
   },
   {
     label: "Facebook",
     href: "https://www.facebook.com/IftekharIAsif/",
-    icon: Facebook,
+    icon: FacebookIcon,
   },
   {
     label: "X",
