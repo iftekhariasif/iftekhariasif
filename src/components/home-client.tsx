@@ -9,7 +9,7 @@ export const HomeClient = () => {
   const { locale, setLocale } = useLocale();
 
   return (
-    <div className="relative flex h-dvh flex-col justify-between overflow-x-hidden overflow-y-auto lg:overflow-hidden selection:bg-foreground selection:text-background">
+    <div className="relative flex min-h-dvh flex-col justify-between overflow-x-hidden overflow-y-auto selection:bg-foreground selection:text-background">
       {/* Ambient Background Lighting */}
       <div
         className="pointer-events-none fixed inset-0 z-0 overflow-hidden"
@@ -20,7 +20,7 @@ export const HomeClient = () => {
         <div className="absolute bottom-10 -right-40 w-[450px] h-[450px] rounded-full bg-foreground/[0.03] blur-[100px]" />
       </div>
 
-      <div className="relative z-10 flex min-h-full flex-col justify-between">
+      <div className="relative z-10 flex min-h-dvh flex-col justify-between">
         <Header locale={locale} onChangeLocale={setLocale} />
         
         <main className="flex flex-1 items-center justify-center py-2 sm:py-3">
