@@ -3,32 +3,38 @@
 import { locales, localeLabels, type Locale } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
-export function LocaleSwitcher({
-  locale,
-  onChange,
-}: {
-  locale: Locale;
-  onChange: (next: Locale) => void;
-}) {
+interface LocaleSwitcherProps {
+  readonly locale: Locale;
+  readonly onChange: (next: Locale) => void;
+}
+
+export const LocaleSwitcher = ({ locale, onChange }: LocaleSwitcherProps) => {
   return (
-    <div className="absolute right-5 top-5 z-10 flex items-center gap-3 text-xs font-medium tracking-wide">
-      {locales.map((l, i) => (
-        <div key={l} className="flex items-center gap-3">
-          {i > 0 && <span className="text-muted-foreground/40">/</span>}
+    <div
+      role="group"
+      aria-label="Language selection"
+      className="inline-flex items-center rounded-full border border-border/60 bg-background/60 p-1 shadow-xs backdrop-blur-md transition-colors"
+    >
+      {locales.map((l) => {
+        const isActive = l === locale;
+        return (
           <button
+            key={l}
             type="button"
             lang={l}
-            aria-pressed={l === locale}
+            aria-pressed={isActive}
             onClick={() => onChange(l)}
             className={cn(
-              "transition-colors hover:text-foreground",
-              l === locale ? "text-foreground" : "text-muted-foreground/70",
+              "relative rounded-full px-3 py-1 text-xs font-semibold tracking-wide transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+              isActive
+                ? "bg-foreground text-background shadow-xs"
+                : "text-muted-foreground hover:text-foreground"
             )}
           >
             {localeLabels[l]}
           </button>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
-}
+};

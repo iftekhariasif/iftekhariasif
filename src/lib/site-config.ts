@@ -1,4 +1,3 @@
-import type { ComponentType, SVGProps } from "react";
 import {
   FacebookIcon,
   InstagramIcon,
@@ -8,27 +7,20 @@ import {
   XIcon,
   YoutubeIcon,
 } from "@/components/icons";
+import type { SocialLink } from "@/types";
 
-type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
+export type { SocialLink };
 
 /**
  * Locale-agnostic site config (links, identifiers, dates). Localized copy
- * — name, title, bio, CTA, meta description — lives in `@/lib/i18n`.
+ * lives in `@/lib/dictionaries`.
  */
-
-export type SocialLink = {
-  label: string;
-  href: string;
-  icon: IconComponent;
-};
-
 export const siteConfig = {
   fullName: "Iftekhar Idris Asif",
-  email: "iftekhar.idris@rit-inc.co.jp",
   url: "https://iftekhariasif.com",
 } as const;
 
-export const socialLinks: SocialLink[] = [
+export const socialLinks: readonly SocialLink[] = [
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/iftekhariasif/",
@@ -64,4 +56,4 @@ export const socialLinks: SocialLink[] = [
     href: "https://www.threads.net/@iftekhariasif",
     icon: ThreadsIcon,
   },
-];
+] as const;

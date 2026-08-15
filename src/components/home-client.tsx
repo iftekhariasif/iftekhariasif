@@ -1,58 +1,34 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Header } from "@/components/header";
 import { Hero } from "@/components/sections/hero";
 import { SiteFooter } from "@/components/site-footer";
-import { LocaleSwitcher } from "@/components/locale-switcher";
-import {
-  defaultLocale,
-  getDictionary,
-  locales,
-  type Locale,
-} from "@/lib/i18n";
+import { useLocale } from "@/hooks";
 
-const STORAGE_KEY = "locale";
-
-function isLocale(value: string | null): value is Locale {
-  return value !== null && (locales as readonly string[]).includes(value);
-}
-
-export function HomeClient() {
-  // Render the default locale on the server / first paint, then resolve the
-  // visitor's preference after hydration (no SSR mismatch this way).
-  const [locale, setLocale] = useState<Locale>(defaultLocale);
-
-  useEffect(() => {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    const browser = navigator.language.toLowerCase();
-    const resolved = isLocale(saved)
-      ? saved
-      : locales.find((l) => browser.startsWith(l));
-    // localStorage/navigator are only available after hydration, so this
-    // intentionally syncs state in a mount effect (runs once, no SSR mismatch).
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    if (resolved) setLocale(resolved);
-  }, []);
-
-  // Keep the document language and tab title in sync with the active locale.
-  useEffect(() => {
-    document.documentElement.lang = locale;
-    const t = getDictionary(locale);
-    document.title = `${t.name} | ${t.title}`;
-  }, [locale]);
-
-  const handleChange = (next: Locale) => {
-    setLocale(next);
-    localStorage.setItem(STORAGE_KEY, next);
-  };
+export const HomeClient = () => {
+  const { locale, setLocale } = useLocale();
 
   return (
-    <div className="flex h-dvh flex-col overflow-hidden">
-      <LocaleSwitcher locale={locale} onChange={handleChange} />
-      <main className="flex min-h-0 flex-1">
-        <Hero locale={locale} />
-      </main>
-      <SiteFooter locale={locale} />
+    <div className="relative flex min-h-dvh flex-col justify-between overflow-x-hidden selection:bg-foreground selection:text-background">
+      {/* Ambient Background Lighting */}
+      <div
+        className="pointer-events-none fixed inset-0 z-0 overflow-hidden"
+        aria-hidden="true"
+      >
+        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[650px] h-[550px] rounded-full bg-foreground/[0.04] blur-[120px] dark:bg-foreground/[0.03]" />
+        <div className="absolute top-1/2 -left-40 w-[400px] h-[400px] rounded-full bg-foreground/[0.03] blur-[100px]" />
+        <div className="absolute bottom-10 -right-40 w-[450px] h-[450px] rounded-full bg-foreground/[0.03] blur-[100px]" />
+      </div>
+
+      <div className="relative z-10 flex min-h-dvh flex-col justify-between">
+        <Header locale={locale} onChangeLocale={setLocale} />
+        
+        <main className="flex flex-1 items-center justify-center py-6">
+          <Hero locale={locale} />
+        </main>
+        
+        <SiteFooter locale={locale} />
+      </div>
     </div>
   );
-}
+};

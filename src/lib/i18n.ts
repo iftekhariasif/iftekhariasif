@@ -1,5 +1,8 @@
 import { en } from "./dictionaries/en";
 import { ja } from "./dictionaries/ja";
+import type { Dictionary } from "@/types";
+
+export * from "@/types";
 
 /**
  * Supported locales. Add new ones here, provide a matching dictionary in
@@ -9,33 +12,22 @@ export const locales = ["en", "ja"] as const;
 export type Locale = (typeof locales)[number];
 
 /** Human-readable label for each locale, shown in the language switcher. */
-export const localeLabels: Record<Locale, string> = {
+export const localeLabels: Readonly<Record<Locale, string>> = {
   en: "EN",
   ja: "日本語",
 };
 
 export const defaultLocale: Locale = "en";
 
-/** Shape every locale's content must satisfy. */
-export type Dictionary = {
-  /** Display name shown in the hero and footer. */
-  name: string;
-  /** Tagline shown beneath the name. */
-  title: string;
-  /** Intro paragraph. */
-  bio: string;
-  /** Call-to-action line shown above the social links. */
-  cta: string;
-  /** SEO meta description (search results + social cards). */
-  description: string;
-};
-
-const dictionaries: Record<Locale, Dictionary> = {
+export const dictionaries: Readonly<Record<Locale, Dictionary>> = {
   en,
   ja,
 };
 
-/** Returns the dictionary for a locale, falling back to the default. */
-export function getDictionary(locale: Locale = defaultLocale): Dictionary {
-  return dictionaries[locale] ?? dictionaries[defaultLocale];
-}
+/** Type guard to validate whether a given value is a supported locale */
+export const isLocale = (value: unknown): value is Locale =>
+  typeof value === "string" && (locales as readonly string[]).includes(value);
+
+/** Returns the dictionary for a locale, falling back gracefully to default */
+export const getDictionary = (locale?: Locale): Dictionary =>
+  dictionaries[locale ?? defaultLocale] ?? dictionaries[defaultLocale];
