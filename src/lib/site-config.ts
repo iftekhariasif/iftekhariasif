@@ -17,6 +17,7 @@ export type { SocialLink };
  */
 export const siteConfig = {
   fullName: "Iftekhar Idris Asif",
+  japaneseName: "イドリス イフテカール",
   url: "https://iftekhariasif.com",
 } as const;
 

@@ -14,23 +14,27 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const t = getDictionary(defaultLocale);
+const tEn = getDictionary("en");
+const tJa = getDictionary("ja");
 
 export const metadata: Metadata = {
   title: {
-    default: `${t.name} | ${t.title}`,
-    template: `%s | ${t.name}`,
+    default: `${tEn.name} | ${tEn.title}`,
+    template: `%s | ${tEn.name}`,
   },
-  description: t.description,
+  description: tEn.description,
   keywords: [
+    // English keywords
     "Iftekhar I Asif",
     "Iftekhar Idris Asif",
+    "Iftekhar Asif",
     "AI Transformation Leader",
-    "AI-Native Product Leader",
+    "AI-Native Product & Tech Leader",
     "Tech Lead",
     "Full-Stack AI Engineer",
     "LLM",
     "RAG",
+    "AI SaaS",
     "Cloud Architecture",
     "AWS",
     "GCP",
@@ -39,6 +43,20 @@ export const metadata: Metadata = {
     "Python",
     "Tokyo",
     "Japan",
+    // Japanese keywords (日本語SEOキーワード)
+    "イドリス イフテカール",
+    "イドリス・イフテカール",
+    "イフテカール イドリス",
+    "イフテカール",
+    "AIネイティブ プロダクト & 技術リーダー",
+    "AIネイティブ",
+    "テックリード",
+    "フルスタックAIエンジニア",
+    "AIエンジニア",
+    "AIコンサルティング",
+    "マイクロサービス",
+    "東京",
+    "日本",
   ],
   authors: [{ name: siteConfig.fullName, url: siteConfig.url }],
   creator: siteConfig.fullName,
@@ -52,10 +70,10 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: `${t.name} | ${t.title}`,
-    description: t.description,
+    title: `${tEn.name} (${siteConfig.japaneseName}) | ${tEn.title}`,
+    description: `${tEn.description} | ${tJa.description}`,
     url: siteConfig.url,
-    siteName: `${t.name} Portfolio`,
+    siteName: `${tEn.name} Portfolio`,
     locale: "en_US",
     alternateLocale: ["ja_JP"],
     type: "profile",
@@ -64,8 +82,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${t.name} | ${t.title}`,
-    description: t.description,
+    title: `${tEn.name} (${siteConfig.japaneseName}) | ${tEn.title}`,
+    description: tEn.description,
     creator: "@IftekharIAsif",
   },
   robots: {
@@ -90,25 +108,50 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     name: siteConfig.fullName,
-    alternateName: t.name,
-    jobTitle: t.title,
-    description: t.description,
+    alternateName: [
+      tEn.name,
+      siteConfig.japaneseName,
+      "イドリス・イフテカール",
+      "イフテカール イドリス",
+      "Iftekhar Asif",
+      "Asif Iftekhar",
+    ],
+    jobTitle: [
+      tEn.title,
+      tJa.title,
+    ],
+    description: `${tEn.description} / ${tJa.description}`,
     url: siteConfig.url,
     address: {
       "@type": "PostalAddress",
       addressLocality: "Tokyo",
-      addressCountry: "Japan",
+      addressCountry: "JP",
     },
+    nationality: {
+      "@type": "Country",
+      name: "Japan",
+    },
+    knowsLanguage: [
+      { "@type": "Language", name: "English", alternateName: "en" },
+      { "@type": "Language", name: "Japanese", alternateName: "ja" },
+      { "@type": "Language", name: "Bengali", alternateName: "bn" },
+    ],
     sameAs: socialLinks.map((link) => link.href),
     knowsAbout: [
       "Artificial Intelligence",
       "Large Language Models (LLMs)",
       "Retrieval-Augmented Generation (RAG)",
-      "Cloud Architecture",
+      "Cloud Architecture (AWS & GCP)",
       "Full-Stack Engineering",
       "TypeScript",
+      "React",
+      "Next.js",
       "Python",
+      "FastAPI",
       "AI SaaS Architecture",
+      "AIネイティブ開発",
+      "プロダクトリーダーシップ",
+      "マイクロサービス",
     ],
   };
 
