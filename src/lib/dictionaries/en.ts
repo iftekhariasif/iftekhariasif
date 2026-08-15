@@ -3,7 +3,7 @@ import type { Dictionary } from "@/types";
 export const en: Dictionary = {
   name: "IFTEKHAR I ASIF",
   title: "AI-NATIVE PRODUCT & TECH LEADER",
-  bio: "A Bangladesh-born, Tokyo-based Japanese citizen and senior AI-Native Product & Tech Leader with 10+ years of experience designing, building, modernizing, and scaling production software. Specializing in AI-enabled SaaS products, enterprise LLM/RAG pipelines, microservices, cloud applications, and agile developer workflows. Combining hands-on engineering across TypeScript, Python, and cloud infrastructure with product vision to turn complex business processes into reliable, maintainable AI software.",
+  bio: "A Bangladesh-born, Tokyo-based Japanese citizen and senior AI-Native Product & Tech Leader with 10+ years of experience designing, building, modernizing, and scaling production software. Specializing in AI-enabled SaaS products, enterprise LLM/RAG pipelines, microservices, cloud applications, and agile developer workflows. Combining hands-on engineering across TypeScript, Python, and cloud infrastructure with product vision to turn complex business processes into reliable, maintainable AI software. Apart from my professional work, I am passionate about traveling, working out, and music.",
   cta: "Have a software or AI product idea? Let's discuss how to take it from concept to production.",
   description:
     "IFTEKHAR I ASIF is an AI-Native Product & Tech Leader with 10+ years of experience in AI SaaS products, LLM/RAG workflows, cloud architectures (AWS/GCP), and full-stack software development.",
