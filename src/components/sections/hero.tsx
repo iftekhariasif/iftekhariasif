@@ -36,13 +36,13 @@ export const Hero = ({ locale }: HeroProps) => {
     <>
       <section
         id="home"
-        className="relative flex w-full flex-col items-center justify-center px-4 py-8 sm:px-6 md:py-12"
+        className="relative flex w-full flex-col items-center justify-center px-4 py-2 sm:px-6"
       >
         <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
           {/* Status / Location Badge */}
-          <div className="mb-6 inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-border/70 bg-card/60 px-3.5 py-1.5 text-xs font-medium text-muted-foreground shadow-2xs backdrop-blur-md">
+          <div className="mb-3 inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-border/70 bg-card/60 px-3 py-1 text-[11px] sm:text-xs font-medium text-muted-foreground shadow-2xs backdrop-blur-md">
             <span className="flex items-center gap-1.5 text-foreground font-medium">
-              <MapPinIcon className="size-3.5 text-foreground/80" />
+              <MapPinIcon className="size-3 text-foreground/80" />
               {dictionary.location}
             </span>
             <span className="text-border/80" aria-hidden="true">
@@ -58,39 +58,39 @@ export const Hero = ({ locale }: HeroProps) => {
           </div>
 
           {/* Hero Title & Name */}
-          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl text-foreground">
+          <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl text-foreground">
             {dictionary.name}
           </h1>
 
-          <p className="mt-3 text-xs sm:text-sm font-semibold uppercase tracking-[0.28em] text-muted-foreground/90">
+          <p className="mt-1.5 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground/90">
             {dictionary.title}
           </p>
 
           {/* Bio */}
-          <div className="mt-7 max-w-2xl rounded-2xl border border-border/50 bg-card/40 p-5 sm:p-6 backdrop-blur-md shadow-xs">
-            <p className="text-sm leading-relaxed sm:text-base sm:leading-relaxed text-muted-foreground">
+          <div className="mt-3.5 max-w-2xl rounded-2xl border border-border/50 bg-card/40 p-3.5 sm:p-4 backdrop-blur-md shadow-xs">
+            <p className="text-xs leading-relaxed sm:text-[13px] sm:leading-relaxed text-muted-foreground">
               {dictionary.bio}
             </p>
           </div>
 
           {/* 3 Main Highlight Domain Cards */}
           {dictionary.highlights?.length > 0 && (
-            <div className="mt-8 w-full">
-              <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-3">
+            <div className="mt-3.5 w-full">
+              <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3">
                 {dictionary.highlights.map((item, idx) => {
                   const IconComponent = getHighlightIcon(item.icon);
                   return (
                     <div
                       key={idx}
-                      className="group relative flex flex-col items-start rounded-xl border border-border/60 bg-card/40 p-4 text-left backdrop-blur-md transition-all duration-200 hover:-translate-y-1 hover:border-foreground/30 hover:bg-card/70 hover:shadow-md"
+                      className="group relative flex flex-col items-start rounded-xl border border-border/60 bg-card/40 p-3 text-left backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-foreground/30 hover:bg-card/70 hover:shadow-sm"
                     >
-                      <div className="mb-2.5 flex size-8 items-center justify-center rounded-lg border border-border/80 bg-accent/70 text-foreground transition-colors group-hover:border-foreground/40 group-hover:bg-foreground group-hover:text-background">
-                        <IconComponent className="size-4" />
+                      <div className="mb-2 flex size-7 items-center justify-center rounded-lg border border-border/80 bg-accent/70 text-foreground transition-colors group-hover:border-foreground/40 group-hover:bg-foreground group-hover:text-background">
+                        <IconComponent className="size-3.5" />
                       </div>
-                      <h3 className="text-xs font-bold uppercase tracking-wider text-foreground sm:text-sm">
+                      <h3 className="text-[11px] font-bold uppercase tracking-wider text-foreground sm:text-xs">
                         {item.title}
                       </h3>
-                      <p className="mt-1.5 text-[11px] leading-snug sm:text-xs text-muted-foreground">
+                      <p className="mt-1 text-[10px] leading-snug sm:text-[11px] text-muted-foreground">
                         {item.description}
                       </p>
                     </div>
@@ -100,29 +100,25 @@ export const Hero = ({ locale }: HeroProps) => {
             </div>
           )}
 
-          {/* Call To Action Block */}
-          <div className="mt-9 w-full max-w-xl flex flex-col items-center">
-            <p className="text-sm font-medium leading-relaxed text-foreground sm:text-base">
+          {/* Call To Action & Social Strip */}
+          <div className="mt-4 w-full max-w-xl flex flex-col items-center">
+            <p className="text-xs font-medium leading-relaxed text-foreground sm:text-sm">
               {dictionary.cta}
             </p>
 
-            {/* Primary Action Button: Open Contact Modal */}
-            <div className="mt-5 flex items-center justify-center">
+            {/* Combined Action Row: Primary Button + Social Links */}
+            <div className="mt-3 flex flex-wrap items-center justify-center gap-3">
               <button
                 type="button"
                 onClick={open}
-                className="inline-flex items-center gap-2.5 rounded-xl bg-foreground px-6 py-3 text-xs sm:text-sm font-semibold text-background shadow-sm transition-all duration-200 hover:opacity-90 hover:shadow-md hover:scale-[1.02] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                className="inline-flex items-center gap-2 rounded-xl bg-foreground px-4.5 py-2 text-xs font-semibold text-background shadow-sm transition-all duration-200 hover:opacity-90 hover:shadow-md hover:scale-[1.02] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
-                <MailIcon className="size-4" />
+                <MailIcon className="size-3.5" />
                 <span>{dictionary.contactButton}</span>
               </button>
-            </div>
 
-            {/* Social Channels Strip */}
-            <div className="mt-8 w-full flex flex-col items-center">
-              <div className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground/70">
-                {dictionary.connectLabel}
-              </div>
+              <div className="hidden sm:block h-4 w-px bg-border/80" aria-hidden="true" />
+
               <SocialLinks />
             </div>
           </div>
