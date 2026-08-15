@@ -44,8 +44,10 @@ export const metadata: Metadata = {
     "Tokyo",
     "Japan",
     // Japanese keywords (日本語SEOキーワード)
+    "イドリス イフテカール アシフ",
+    "イドリス・イフテカール・アシフ",
     "イドリス イフテカール",
-    "イドリス・イフテカール",
+    "イフテカール アシフ",
     "イフテカール イドリス",
     "イフテカール",
     "AIネイティブ プロダクト & 技術リーダー",
@@ -111,7 +113,9 @@ export default function RootLayout({
     alternateName: [
       tEn.name,
       siteConfig.japaneseName,
-      "イドリス・イフテカール",
+      "イドリス・イフテカール・アシフ",
+      "イドリス イフテカール",
+      "イフテカール アシフ",
       "イフテカール イドリス",
       "Iftekhar Asif",
       "Asif Iftekhar",
