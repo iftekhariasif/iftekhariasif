@@ -159,9 +159,27 @@ export default function RootLayout({
     ],
   };
 
+  const themeInitScript = `
+    (function() {
+      try {
+        var stored = localStorage.getItem('theme');
+        if (stored === 'light') {
+          document.documentElement.classList.remove('dark');
+        } else {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  `;
+
   return (
-    <html lang={defaultLocale} suppressHydrationWarning>
+    <html lang={defaultLocale} className="dark" suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{ __html: themeInitScript }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

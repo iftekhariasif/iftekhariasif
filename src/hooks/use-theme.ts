@@ -8,12 +8,8 @@ const THEME_KEY = "theme";
 
 const subscribeTheme = (callback: () => void): (() => void) => {
   window.addEventListener("storage", callback);
-  const media = window.matchMedia("(prefers-color-scheme: dark)");
-  media.addEventListener("change", callback);
-
   return () => {
     window.removeEventListener("storage", callback);
-    media.removeEventListener("change", callback);
   };
 };
 
@@ -22,7 +18,7 @@ const getThemeSnapshot = (): ThemeMode => {
   if (stored === "dark" || stored === "light") {
     return stored;
   }
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  return "dark";
 };
 
 const getThemeServerSnapshot = (): ThemeMode => "dark";
