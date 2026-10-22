@@ -1,33 +1,51 @@
-<!-- https://github.com/iftekhariasif/iftekhariasif/issues/1  -->
-<h2 align="center">Hello World 👋 I am Iftekhar I Asif</h2>
-
-<!-- https://github.com/iftekhariasif/iftekhariasif/issues/3  -->
 <div align="center">
 
-<a href="https://www.youtube.com/IftekharIAsif" target="blank">![YouTube](https://img.shields.io/youtube/channel/subscribers/UCvE1503oOurDjrFw2Mrt-Og?color=%09%23FF0000&logo=youtube&style=for-the-badge)</a> <a href="https://www.twitter.com/IftekharIAsif" target="blank">![Twitter](https://img.shields.io/twitter/follow/iftekhariasif?label=Iftekhar%20I%20Asif&logo=twitter&style=for-the-badge)</a> <a href="https://www.github.com/IftekharIAsif" target="blank">![GitHub](https://img.shields.io/github/followers/IftekharIAsif?logo=github&style=for-the-badge)</a>
+<sub>PRODUCT ENGINEERING · ENTREPRENEURSHIP · TECHNICAL LEADERSHIP</sub>
+
+# IFTEKHAR I ASIF
+
+### TURNING INNOVATIVE IDEAS INTO SCALABLE TECH PRODUCTS
+
+**AI &nbsp; / &nbsp; CLOUD &nbsp; / &nbsp; WEB3 &nbsp; / &nbsp; BLOCKCHAIN**
+
+<a href="https://www.twitter.com/IftekharIAsif"><img src="https://img.shields.io/badge/Follow_on_X-111111?style=for-the-badge&logo=x&logoColor=white" alt="X (Twitter)" width="130" height="28"></a>
 
 </div>
 
 ---
 
-### 🧑‍💻 WHO AM I?
+### 01 &nbsp; / &nbsp; THE PERSON BEHIND THE PRODUCTS
 
-<p align="justify">
-A Bangladesh-born, Japanese citizen, aspiring tech professional and self-taught coding enthusiast, passionate about developing digital products & services in the AI, Cloud, Web3 & Blockchain industries. I am committed to turning innovative ideas into scalable tech products using my technical and leadership expertise. Apart from my professional life, I am passionate about traveling, working out, and music.
-</p>
+Hello World — I'm **Iftekhar I Asif**. 👋
+
+I'm a Bangladesh-born Japanese citizen, an aspiring tech professional, and a self-taught coding enthusiast. I'm passionate about developing digital products and services, bringing together my technical and leadership expertise to turn innovative ideas into products that scale.
+
+My curiosity lives at the intersection of **AI, Cloud, Web3, and Blockchain**. These are the industries where I want to build, contribute, and bring ideas to life.
+
+| WHERE MY CURIOSITY GOES | WHAT DRIVES ME |
+| :--- | :--- |
+| **AI · CLOUD · WEB3 · BLOCKCHAIN** | Developing Digital Products And Services In These Industries. |
+| **IDEAS → SCALABLE PRODUCTS** | Putting Technical And Leadership Expertise To Work. |
+| **BEYOND THE SCREEN** | Traveling, Working Out, And Music. |
+
+---
+
+### 02 &nbsp; / &nbsp; LET'S BUILD SOMETHING TOGETHER
+
+**Have An AI Or Software Product In Mind?**
+
+Let's turn that idea into something real. If you're looking to hire me or build together, reach out through any of my channels below.
+
+| LET'S CONNECT | FIND ME HERE |
+| :--- | :--- |
+| **WORK & OPPORTUNITIES** | [LINKEDIN](https://www.linkedin.com/in/iftekhariasif/) &nbsp; · &nbsp; [WANTEDLY](https://www.wantedly.com/id/iftekhariasif) |
+| **VIDEO & CONVERSATION** | [YOUTUBE](https://www.youtube.com/iftekhariasif) &nbsp; · &nbsp; [TWITTER](https://twitter.com/iftekhariasif) &nbsp; · &nbsp; [THREADS](https://www.threads.net/@iftekhariasif) |
+| **MORE OF MY WORLD** | [INSTAGRAM](https://www.instagram.com/iftekhariasif/) &nbsp; · &nbsp; [FACEBOOK](https://www.facebook.com/iftekhariasif/) |
 
 ---
 
-### ✉️ WANT TO HIRE ME?
+<div align="center">
 
-Have an AI or software product in mind? Let's build it together — reach out through any of my channels below.
+<sub>IDEAS INTO PRODUCTS. CURIOSITY INTO CODE.</sub>
 
-- **LINKEDIN:** https://www.linkedin.com/in/iftekhariasif/
-- **WANTEDLY:** https://www.wantedly.com/id/iftekhariasif
-- **YOUTUBE:** https://www.youtube.com/iftekhariasif
-- **INSTAGRAM:** https://www.instagram.com/iftekhariasif/
-- **FACEBOOK:** https://www.facebook.com/iftekhariasif/
-- **TWITTER:** https://twitter.com/iftekhariasif
-- **THREADS:** https://www.threads.net/@iftekhariasif
-
----
+</div>
