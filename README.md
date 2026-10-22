@@ -8,7 +8,7 @@
 
 **AI &nbsp; / &nbsp; CLOUD &nbsp; / &nbsp; WEB3 &nbsp; / &nbsp; BLOCKCHAIN**
 
-<a href="https://www.twitter.com/IftekharIAsif"><img src="https://img.shields.io/badge/Follow_on_X-111111?style=for-the-badge&logo=x&logoColor=white" alt="X (Twitter)" width="130" height="28"></a>
+<a href="https://www.twitter.com/IftekharIAsif"><img src="https://img.shields.io/badge/Follow_me_on_X-111111?style=for-the-badge&logo=x&logoColor=white" alt="Follow me on X" width="130" height="28"></a>
 
 </div>
 
